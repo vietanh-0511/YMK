@@ -1,0 +1,80 @@
+.navigater-link {
+ font-weight: 600;
+}
+.navigater-link:hover {
+ color: #bf922d;
+}
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.hotline-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 20;
+  color: #111111;
+  padding: 12px 20px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s, transform 0.2s;
+}
+.hotline-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+.custom-booking-btn {
+  background: linear-gradient(
+    270deg,
+    #c39835 0%,
+    #fbf3a6 23.9%,
+    #c39835 50.4%,
+    #fbf3a6 79.4%,
+    #bf922d 100%
+  );
+}
+
+.gradient-button {
+  background: linear-gradient(
+    270deg,
+    #c39835 0%,
+    #fbf3a6 23.9%,
+    #c39835 50.4%,
+    #fbf3a6 79.4%,
+    #bf922d 100%
+  );
+}
+.gradient-button:hover {
+  background: linear-gradient(
+    270deg,
+    #9c7b2d 0%,
+    #beb87f 23.9%,
+    #8d6e27 50.4%,
+    #b4ae77 79.4%,
+    #8f6e21 100%
+  );
+}
+
+.background-gradient {
+  background: linear-gradient(
+    70deg,
+    #c39835 0%,
+    #fbf3a6 23.9%,
+    #c39835 50.4%,
+    #fbf3a6 79.4%,
+    #bf922d 100%
+  );
+}
+.mystical-gradient {
+  background: linear-gradient(135deg, #000000 0%, #1d1d1d 50%, #000000 100%);
+}
