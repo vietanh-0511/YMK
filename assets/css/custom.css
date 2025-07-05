@@ -1,8 +1,8 @@
 .navigater-link {
- font-weight: 600;
+  font-weight: 600;
 }
 .navigater-link:hover {
- color: #bf922d;
+  color: #bf922d;
 }
 .video-bg {
   position: absolute;
@@ -77,4 +77,13 @@
 }
 .mystical-gradient {
   background: linear-gradient(135deg, #000000 0%, #1d1d1d 50%, #000000 100%);
+}
+
+.error {
+  border-color: #ef4444;
+}
+.error-text {
+  color: #ef4444;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
 }

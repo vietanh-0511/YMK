@@ -6,21 +6,23 @@
     <title>Karaoke Lounge - Book Your Singing Experience</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="assets/css/custom.css" />
+    <link rel="stylesheet" href="assets/css/output.css" />
+    <link rel="script" href="assets/js/custom.js" />
   </head>
   <body class="bg-gray-900 text-white font-sans">
     <!-- Header with Logo and Navbar -->
     <header class="fixed top-0 left-0 w-full bg-black bg-opacity-50 z-10">
-      <div class="mx-auto p-[70px] py-4 flex items-center justify-between">
+      <div class="mx-auto md:px-[70px] px-4 py-4 flex items-center justify-between">
         <!-- Logo -->
         <div class="flex items-center">
           <img
             src="assets/images/logo_4x.png"
             alt="Karaoke Lounge Logo"
-            class="h-20"
+            class="h-20 max-sm:h-10"
           />
         </div>
         <!-- Navbar -->
-        <nav class="flex space-x-4 md:space-x-8">
+        <nav class="flex space-x-4 md:space-x-8 max-sm:hidden">
           <a href="#home" class="navigater-link transition duration-300"
             >Home</a
           >
@@ -30,15 +32,15 @@
           <a href="#pricing" class="navigater-link transition duration-300"
             >Khuyến Mãi</a
           >
-          <a href="#booking" class="navigater-link transition duration-300"
+          <!--<a href="#booking" class="navigater-link transition duration-300"
             >Đăng Kí Ngay</a
-          >
+          >-->
         </nav>
       </div>
     </header>
 
     <!-- Hotline Button -->
-    <a href="" class="hotline-btn gradient-button">
+    <a href="tel:123456789" class="hotline-btn gradient-button">
       <svg fill="currentColor" viewBox="0 0 24 24">
         <path
           d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.24 1.02l-2.2 2.2z"
@@ -49,10 +51,11 @@
 
     <!-- Hero Section with Background Video -->
     <section id="home" class="relative h-screen overflow-hidden">
-      <video class="video-bg" autoplay muted loop playsinline>
+      <video class="video-bg max-lg:hidden" autoplay muted loop playsinline>
         <source src="assets/videos/background.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
+      <img class="video-bg lg:hidden" src="assets/images/NKO_0936_1.jpg"/>
       <div
         class="bg-black bg-opacity-70 h-full flex flex-col justify-center items-center text-center px-4 relative z-0"
       >
@@ -70,7 +73,7 @@
           >
             <!-- Content -->
             <a
-              href="#booking"
+              href="tel:123456789"
               class="text-black font-semibold py-3 px-6 rounded-lg transition duration-300 py-2 px-6 my-2 gradient-button"
               >Đặt Phòng Ngay</a
             >
@@ -82,7 +85,7 @@
     <!-- Features Section with Background Image -->
     <section
       id="features"
-      class="bg-cover bg-center relative 2xl:aspect-[16/6] xl:aspect-[16/8] lg:aspect-[16/10] max-sm:aspect-[4/18] max-md:aspect-[8/16]"
+      class="bg-cover bg-center relative 2xl:aspect-[16/6] xl:aspect-[16/8] lg:aspect-[16/10]"
       style="background-image: url('assets/images/NKO_1095.jpg')"
     >
       <div class="bg-black bg-opacity-60 py-16 h-full">
@@ -144,15 +147,15 @@
     <!-- Pricing Section with Background Image -->
     <section
       id="pricing"
-      class="bg-cover bg-center relative 2xl:aspect-[16/6] xl:aspect-[16/8] lg:aspect-[16/10] max-sm:aspect-[4/18] max-md:aspect-[8/16]"
+      class="bg-cover bg-center relative 2xl:aspect-[16/6] xl:aspect-[16/8] lg:aspect-[16/10]"
       style="background-image: url('assets/images/NKO_1004.jpg')"
     >
-      <div class="bg-black bg-opacity-60 py-16 h-full">
+      <div class="bg-black bg-opacity-60 py-16 px-5 h-full">
         <div class="max-w-6xl mx-auto">
           <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
             Chương trình khuyến mãi
           </h2>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-black">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-lg:gap-4 text-black">
             <div class="p-6 rounded-lg text-center background-gradient">
               <p class="text-2xl font-bold mb-4">Ưu đãi giờ vàng</p>
               <p>
@@ -183,9 +186,9 @@
     </section>
 
     <!-- Booking Section with Background Image -->
-    <section
+    <!-- <section
       id="booking"
-      class="bg-cover bg-center relative 2xl:aspect-[16/6] xl:aspect-[16/8] lg:aspect-[16/10] max-sm:aspect-[4/18] max-md:aspect-[8/16]"
+      class="bg-cover bg-center relative 2xl:aspect-[16/6] xl:aspect-[16/8] lg:aspect-[16/10]"
       style="background-image: url('assets/images/NKO_0994.jpg')"
     >
       <div class="bg-black bg-opacity-60 py-16 h-full">
@@ -193,31 +196,35 @@
           <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
             Đăng kí đặt phòng ngay
           </h2>
-          <form class="w-full max-w-md">
+          <form id="booking-form" class="w-full max-w-md">
             <div class="mb-4">
                 <label for="name" class="block text-sm font-medium text-yellow-400">Họ và Tên</label>
                 <input type="text" id="name" name="name" class="mt-1 w-full p-2 bg-gray-900 border border-yellow-500 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-400" required>
+                <p id="name-error" class="error-text hidden"></p>
             </div>
             <div class="mb-4">
                 <label for="phone" class="block text-sm font-medium text-yellow-400">Số Điện Thoại</label>
                 <input type="tel" id="phone" name="phone" class="mt-1 w-full p-2 bg-gray-900 border border-yellow-500 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-400" required>
+                <p id="phone-error" class="error-text hidden"></p>
             </div>
             <div class="mb-4">
                 <label for="date" class="block text-sm font-medium text-yellow-400">Ngày Đặt</label>
                 <input type="date" id="date" name="date" class="mt-1 w-full p-2 bg-gray-900 border border-yellow-500 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-400" required>
+                <p id="date-error" class="error-text hidden"></p>
             </div>
             <div class="mb-4">
                 <label for="time" class="block text-sm font-medium text-yellow-400">Giờ Đặt</label>
                 <input type="time" id="time" name="time" class="mt-1 w-full p-2 bg-gray-900 border border-yellow-500 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-400" required>
+                <p id="time-error" class="error-text hidden"></p>
             </div>
             <button type="submit" class="w-full text-black font-semibold py-2 px-4 mt-4 rounded-md transition duration-300 gradient-button">Xác Nhận Đặt Phòng</button>
         </form>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Footer -->
-    <footer class="mystical-gradient text-white py-6">
+    <footer class="mystical-gradient text-white py-6 max-lg:pb-[80px]">
         <div class="container mx-auto px-4 text-center">
             <div class="mb-4">
                 <h3 class="text-lg font-semibold">Liên Hệ Với Chúng Tôi</h3>
