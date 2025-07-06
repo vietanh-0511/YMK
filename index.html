@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Karaoke Lounge - Book Your Singing Experience</title>
+    <title>Y&M Karaoke - Nơi cảm xúc thăng hoa</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="assets/css/custom.css" />
     <link rel="stylesheet" href="assets/css/output.css" />
@@ -11,8 +11,10 @@
   </head>
   <body class="bg-gray-900 text-white font-sans">
     <!-- Header with Logo and Navbar -->
-    <header class="fixed top-0 left-0 w-full bg-black bg-opacity-50 z-10">
-      <div class="mx-auto md:px-[70px] px-4 py-4 flex items-center justify-between">
+    <header class="fixed top-0 left-0 w-full bg-black bg-opacity-70 z-10">
+      <div
+        class="mx-auto lg:px-[70px] px-4 py-4 flex items-center justify-between"
+      >
         <!-- Logo -->
         <div class="flex items-center">
           <img
@@ -20,6 +22,12 @@
             alt="Karaoke Lounge Logo"
             class="h-20 max-sm:h-10"
           />
+        </div>
+        <!-- Marquee -->
+        <div class="marquee mx-4 flex bg-transparent max-w-4xl">
+          <div class="marquee-content w-full dayland-text">
+            Nơi Cảm Xúc Thăng Hoa
+          </div>
         </div>
         <!-- Navbar -->
         <nav class="flex space-x-4 md:space-x-8 max-sm:hidden">
@@ -32,10 +40,36 @@
           <a href="#pricing" class="navigater-link transition duration-300"
             >Khuyến Mãi</a
           >
-          <!--<a href="#booking" class="navigater-link transition duration-300"
-            >Đăng Kí Ngay</a
-          >-->
+          <a href="#location" class="navigater-link transition duration-300"
+            >Bản Đồ</a
+          >
         </nav>
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+          <button id="menu-btn" class="text-white focus:outline-none">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="md:hidden hidden bg-black bg-opacity-90 p-4">
+        <a href="#home" class="block py-2 navigater-link">Home</a>
+        <a href="#features" class="block py-2 navigater-link">Giới Thiệu</a>
+        <a href="#pricing" class="block py-2 navigater-link">Khuyến Mãi</a>
+        <a href="#location" class="block py-2 navigater-link">Bản Đồ</a>
       </div>
     </header>
 
@@ -51,11 +85,12 @@
 
     <!-- Hero Section with Background Video -->
     <section id="home" class="relative h-screen overflow-hidden">
-      <video class="video-bg max-lg:hidden" autoplay muted loop playsinline>
+      <!-- <video class="video-bg max-lg:hidden" autoplay muted loop playsinline>
         <source src="assets/videos/background.mp4" type="video/mp4" />
         Your browser does not support the video tag.
-      </video>
-      <img class="video-bg lg:hidden" src="assets/images/NKO_0936_1.jpg"/>
+      </video> -->
+      <img class="video-bg lg:hidden" src="assets/images/NKO_0936_1.jpg" />
+      <img class="video-bg max-lg:hidden" src="assets/images/NKO_1095.jpg" />
       <div
         class="bg-black bg-opacity-70 h-full flex flex-col justify-center items-center text-center px-4 relative z-0"
       >
@@ -86,7 +121,7 @@
     <section
       id="features"
       class="bg-cover bg-center relative 2xl:aspect-[16/6] xl:aspect-[16/8] lg:aspect-[16/10]"
-      style="background-image: url('assets/images/NKO_1095.jpg')"
+      style="background-image: url('assets/images/NKO_1004.jpg')"
     >
       <div class="bg-black bg-opacity-60 py-16 h-full">
         <div class="max-w-6xl mx-auto bg-black bg-opacity-50 rounded-md p-7">
@@ -148,14 +183,16 @@
     <section
       id="pricing"
       class="bg-cover bg-center relative 2xl:aspect-[16/6] xl:aspect-[16/8] lg:aspect-[16/10]"
-      style="background-image: url('assets/images/NKO_1004.jpg')"
+      style="background-image: url('assets/images/NKO_0994.jpg')"
     >
       <div class="bg-black bg-opacity-60 py-16 px-5 h-full">
         <div class="max-w-6xl mx-auto">
           <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
             Chương trình khuyến mãi
           </h2>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-lg:gap-4 text-black">
+          <div
+            class="grid grid-cols-1 md:grid-cols-3 gap-8 max-lg:gap-4 text-black"
+          >
             <div class="p-6 rounded-lg text-center background-gradient">
               <p class="text-2xl font-bold mb-4">Ưu đãi giờ vàng</p>
               <p>
@@ -165,11 +202,11 @@
               </p>
             </div>
             <div class="p-6 rounded-lg text-center background-gradient">
-              <p class="text-2xl font-bold mb-4">Check-in nhận quà</p>
+              <p class="text-2xl font-bold mb-4">Giảm ngay 10% khi checkin</p>
               <p>
-                Chụp ảnh check-in tại quán, đăng lên Facebook hoặc Instagram ở
-                chế độ công khai, bạn sẽ được tặng thêm nước suối hoặc giảm
-                10.000đ vào hóa đơn hiện tại.
+                Check-in tại quán, đánh giá 5 sao và để lại 5 bình luận trên
+                Google Maps để nhận <b>giảm 10% trên tổng bill</b>. Lan tỏa trải
+                nghiệm tuyệt vời cùng bạn bè và nhận quà liền tay!
               </p>
             </div>
             <div class="p-6 rounded-lg text-center background-gradient">
@@ -180,6 +217,28 @@
               </p>
               <p>Nhóm trên 8 người: Tặng thêm 30 phút hát miễn phí</p>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Google Maps Section -->
+    <section
+      id="location"
+      class="bg-cover bg-center"
+      style="background-image: url('assets/images/NKO_1090.jpg')"
+    >
+      <div class="bg-black bg-opacity-60 py-16 px-5 h-full">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+            Bản đồ
+          </h2>
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.533727487748!2d105.8342992258402!3d20.971232039750895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ad4cecbd1cf5%3A0xb4cd4f095db3e314!2sKaraoke%20Y%26M%20(You%20and%20Me)!5e0!3m2!1svi!2s!4v1751825290910!5m2!1svi!2s"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
           </div>
         </div>
       </div>
@@ -225,25 +284,42 @@
 
     <!-- Footer -->
     <footer class="mystical-gradient text-white py-6 max-lg:pb-[80px]">
-        <div class="container mx-auto px-4 text-center">
-            <div class="mb-4">
-                <h3 class="text-lg font-semibold">Liên Hệ Với Chúng Tôi</h3>
-                <img src="assets/images/logo_4x.png" alt="Logo" class="mx-auto mt-2 w-24 h-auto">
-            </div>
-            <div class="space-y-2">
-                <p><strong>Địa chỉ:</strong> 123 Đường ABC, Quận 1, TP. HCM, Việt Nam</p>
-                <p><strong>Website:</strong> <a href="https://example.com" class="text-blue-400 hover:underline">www.example.com</a></p>
-                <p><strong>Hotline:</strong> 0909 123 456</p>
-                <p><strong>Email:</strong> <a href="mailto:info@example.com" class="text-blue-400 hover:underline">info@example.com</a></p>
-            </div>
-            <div class="mt-4">
-                <p>© 2025 Example Company. All rights reserved.</p>
-            </div>
+      <div class="container mx-auto px-4 text-center">
+        <div class="mb-4">
+          <h3 class="text-lg font-semibold">Liên Hệ Với Chúng Tôi</h3>
+          <img
+            src="assets/images/logo_4x.png"
+            alt="Logo"
+            class="mx-auto mt-2 w-24 h-auto"
+          />
         </div>
-    </footer>
+        <div class="space-y-2">
+          <p>
+            <strong>Địa chỉ:</strong> 36A Nguyễn Hữu Thọ, Thịnh Liệt, Hoàng Mai,
+            Hà Nội - Số 105, Đại Từ, Đại Kim, Hoàng Mai, Hà Nội
+          </p>
+          <p>
+            <strong>Website:</strong>
+            <a href="https://example.com" class="text-blue-400 hover:underline"
+              >www.example.com</a
+            >
+          </p>
+          <p><strong>Hotline:</strong> 0909 123 456</p>
+          <p>
+            <strong>Email:</strong>
+            <a
+              href="mailto:info@example.com"
+              class="text-blue-400 hover:underline"
+              >info@example.com</a
+            >
+          </p>
+        </div>
+        <div class="mt-4">
+          <p>© 2025 Y&M. All rights reserved.</p>
+        </div>
+      </div>
     </footer>
 
-    <!-- Smooth Scroll Script -->
     <script>
       document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener("click", function (e) {
@@ -252,6 +328,13 @@
             behavior: "smooth",
           });
         });
+      });
+
+      // Mobile Menu Toggle
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
       });
     </script>
   </body>
