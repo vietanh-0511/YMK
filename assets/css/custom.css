@@ -1,9 +1,7 @@
-@font-face {
-  font-family: "UTM Cinderela";
-  src: url("../fonts/SVN-Safina\ Script.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
+:root {
+  --bronze-gold: #d4af37;
 }
+
 @font-face {
   font-family: "UTM Dayland";
   src: url("../fonts/SVN-Dayland.ttf") format("truetype");
@@ -11,17 +9,10 @@
   font-style: normal;
 }
 
-.cinderela-text {
-  font-family: "UTM Cinderela", cursive;
-  color: #fff700; /* màu chữ vàng như ảnh */
-  text-shadow: 0 0 10px #fff700, 0 0 20px #ffd700;
-  font-size: 3rem;
-}
-
 .dayland-text {
   font-family: "UTM Dayland", cursive;
-  color: #fff700; /* màu chữ vàng như ảnh */
-  text-shadow: 0 0 2px #fff700, 0 0 4px #ffd700;
+  color: var(--bronze-gold); /* màu chữ vàng như ảnh */
+  text-shadow: 0 0 2px #cabb58, 0 0 4px #e3d37a;
   font-size: 1.5rem;
 }
 
@@ -46,7 +37,7 @@
   left: 20px;
   z-index: 20;
   color: #111111;
-  padding: 12px 20px;
+  padding: 12px 12px;
   border-radius: 50px;
   display: flex;
   align-items: center;
@@ -59,7 +50,38 @@
   width: 24px;
   height: 24px;
 }
-
+.hotline-popup {
+  display: none;
+  position: fixed;
+  bottom: 80px;
+  left: 20px;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0);
+  color: #111111;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: scale(0.8) translateY(20px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.hotline-popup.show {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+.hotline-number {
+  color: #111111;
+  padding: 12px 20px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s, transform 0.2s;
+}
 .custom-booking-btn {
   background: linear-gradient(
     270deg,
@@ -104,6 +126,30 @@
 }
 .mystical-gradient {
   background: linear-gradient(135deg, #000000 0%, #1d1d1d 50%, #000000 100%);
+}
+
+.info-box {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 16px;
+  border-radius: 8px;
+  max-width: 250px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.info-box a {
+  color: var(--bronze-gold);
+  text-decoration: underline;
+}
+.info-box a:hover {
+  text-shadow: 0 0 2px #cabb58, 0 0 4px #e3d37a;
 }
 
 .error {

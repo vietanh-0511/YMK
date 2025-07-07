@@ -32,7 +32,7 @@
         <!-- Navbar -->
         <nav class="flex space-x-4 md:space-x-8 max-sm:hidden">
           <a href="#home" class="navigater-link transition duration-300"
-            >Home</a
+            >Trang Chủ</a
           >
           <a href="#features" class="navigater-link transition duration-300"
             >Giới Thiệu</a
@@ -74,14 +74,24 @@
     </header>
 
     <!-- Hotline Button -->
-    <a href="tel:123456789" class="hotline-btn gradient-button">
+    <button class="hotline-btn gradient-button" onclick="toggleHotlinePopup()">
       <svg fill="currentColor" viewBox="0 0 24 24">
         <path
           d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.24 1.02l-2.2 2.2z"
         />
       </svg>
-      Hotline: 0123 456 789
-    </a>
+    </button>
+    <!-- Hotline Popup -->
+    <div class="hotline-popup transition-discrete" id="hotlinePopup">
+      <div class="hotline-number gradient-button">
+        <strong>Lễ Tân:</strong>
+        <a href="tel:0981063636">0981 06 36 36</a>
+      </div>
+      <div class="hotline-number gradient-button">
+        <strong>Mr. Phong:</strong>
+        <a href="tel:0987631212">0987 63 12 12</a>
+      </div>
+    </div>
 
     <!-- Hero Section with Background Video -->
     <section id="home" class="relative h-screen overflow-hidden">
@@ -108,9 +118,31 @@
           >
             <!-- Content -->
             <a
-              href="tel:123456789"
+              href="tel:0981063636"
               class="text-black font-semibold py-3 px-6 rounded-lg transition duration-300 py-2 px-6 my-2 gradient-button"
               >Đặt Phòng Ngay</a
+            >
+          </div>
+        </div>
+
+        <!-- Info Box -->
+        <div class="info-box">
+          <div class="text-left">
+            <strong>Facebook:</strong>
+            <a href="https://www.facebook.com/KaraokeYaM">Karaoke Y&M</a>
+          </div>
+          <div class="text-left">
+            <strong>Youtube:</strong>
+            <a href="https://www.youtube.com/@karaokeym">Karaoke Y&M</a>
+          </div>
+          <div class="text-left">
+            <strong>Tiktok:</strong>
+            <a href="https://www.tiktok.com/@karaokey_m">Karaoke Y&M</a>
+          </div>
+          <div class="text-left">
+            <strong>Địa chỉ:</strong>
+            <a href="https://maps.app.goo.gl/vNTn6Kgvz5JUGXt36"
+              >36A Nguyễn Hữu Thọ, Hoàng Mai Hà Nội</a
             >
           </div>
         </div>
@@ -196,9 +228,9 @@
             <div class="p-6 rounded-lg text-center background-gradient">
               <p class="text-2xl font-bold mb-4">Ưu đãi giờ vàng</p>
               <p>
-                Đặt phòng trước 17h mỗi ngày và nhận ngay giảm giá 20% cho toàn
-                bộ giờ hát. Áp dụng tất cả các ngày trong tuần, bao gồm cả cuối
-                tuần và lễ tết
+                Từ 12h đến 18h mỗi ngày, khách hàng được
+                <b>giảm 50% giờ hát</b>.Ưu đãi áp dụng xuyên suốt các ngày trong
+                tuần
               </p>
             </div>
             <div class="p-6 rounded-lg text-center background-gradient">
@@ -210,12 +242,15 @@
               </p>
             </div>
             <div class="p-6 rounded-lg text-center background-gradient">
-              <p class="text-2xl font-bold mb-4">Tặng ngay quà khi đi nhóm</p>
+              <p class="text-2xl font-bold mb-4">Thẻ Siêu VIP</p>
+              <p>Miễn phí giờ hát từ 12h đến 24h mỗi ngày</p>
+              <p>Tặng bánh kem và trang trí phòng khi tổ chức sinh nhật</p>
               <p>
-                Nhóm từ 5 người trở lên: Tặng 01 phần nước ngọt hoặc snack cao
-                cấp
+                Chiết khấu 10% tổng bill mỗi lần giới thiệu khách đến check-in
+                và đánh giá 5 sao
               </p>
-              <p>Nhóm trên 8 người: Tặng thêm 30 phút hát miễn phí</p>
+              <p>Cấp mã số ưu tiên khi đặt phòng</p>
+              <p>Hiệu lực sử dụng: 3 tháng</p>
             </div>
           </div>
         </div>
@@ -244,79 +279,44 @@
       </div>
     </section>
 
-    <!-- Booking Section with Background Image -->
-    <!-- <section
-      id="booking"
-      class="bg-cover bg-center relative 2xl:aspect-[16/6] xl:aspect-[16/8] lg:aspect-[16/10]"
-      style="background-image: url('assets/images/NKO_0994.jpg')"
-    >
-      <div class="bg-black bg-opacity-60 py-16 h-full">
-        <div class="max-w-xl mx-auto bg-black bg-opacity-80 rounded-md px-7 py-9 flex flex-col items-center">
-          <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
-            Đăng kí đặt phòng ngay
-          </h2>
-          <form id="booking-form" class="w-full max-w-md">
-            <div class="mb-4">
-                <label for="name" class="block text-sm font-medium text-yellow-400">Họ và Tên</label>
-                <input type="text" id="name" name="name" class="mt-1 w-full p-2 bg-gray-900 border border-yellow-500 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-400" required>
-                <p id="name-error" class="error-text hidden"></p>
-            </div>
-            <div class="mb-4">
-                <label for="phone" class="block text-sm font-medium text-yellow-400">Số Điện Thoại</label>
-                <input type="tel" id="phone" name="phone" class="mt-1 w-full p-2 bg-gray-900 border border-yellow-500 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-400" required>
-                <p id="phone-error" class="error-text hidden"></p>
-            </div>
-            <div class="mb-4">
-                <label for="date" class="block text-sm font-medium text-yellow-400">Ngày Đặt</label>
-                <input type="date" id="date" name="date" class="mt-1 w-full p-2 bg-gray-900 border border-yellow-500 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-400" required>
-                <p id="date-error" class="error-text hidden"></p>
-            </div>
-            <div class="mb-4">
-                <label for="time" class="block text-sm font-medium text-yellow-400">Giờ Đặt</label>
-                <input type="time" id="time" name="time" class="mt-1 w-full p-2 bg-gray-900 border border-yellow-500 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-400" required>
-                <p id="time-error" class="error-text hidden"></p>
-            </div>
-            <button type="submit" class="w-full text-black font-semibold py-2 px-4 mt-4 rounded-md transition duration-300 gradient-button">Xác Nhận Đặt Phòng</button>
-        </form>
-        </div>
-      </div>
-    </section> -->
-
     <!-- Footer -->
-    <footer class="mystical-gradient text-white py-6 max-lg:pb-[80px]">
-      <div class="container mx-auto px-4 text-center">
-        <div class="mb-4">
-          <h3 class="text-lg font-semibold">Liên Hệ Với Chúng Tôi</h3>
+    <footer
+      class="mystical-gradient text-white py-6 max-lg:pb-[80px] flex flex-col items-center"
+    >
+      <div class="container mx-auto px-4 text-center flex justify-between max-md:flex-col gap-4">
+        <div class="space-y-4">
           <img
             src="assets/images/logo_4x.png"
             alt="Logo"
             class="mx-auto mt-2 w-24 h-auto"
           />
+          <h3 class="dayland-text text-sm">Nơi Cảm Xúc Thăng Hoa</h3>
         </div>
-        <div class="space-y-2">
+        <div class="space-y-2 flex flex-col max-w-md text-left">
           <p>
-            <strong>Địa chỉ:</strong> 36A Nguyễn Hữu Thọ, Thịnh Liệt, Hoàng Mai,
+            <strong>Facebook:</strong>
+            <a href="https://www.facebook.com/KaraokeYaM">Karaoke Y&M</a>
+          </p>
+          <p>
+            <strong>Youtube:</strong>
+            <a href="https://www.youtube.com/@karaokeym">Karaoke Y&M</a>
+          </p>
+          <p>
+            <strong>Tiktok:</strong>
+            <a href="https://www.tiktok.com/@karaokey_m">Karaoke Y&M</a>
+          </p>
+          <p>
+            <strong>Địa chỉ: </strong>36A Nguyễn Hữu Thọ, Thịnh Liệt, Hoàng Mai,
             Hà Nội - Số 105, Đại Từ, Đại Kim, Hoàng Mai, Hà Nội
           </p>
           <p>
-            <strong>Website:</strong>
-            <a href="https://example.com" class="text-blue-400 hover:underline"
-              >www.example.com</a
-            >
-          </p>
-          <p><strong>Hotline:</strong> 0909 123 456</p>
-          <p>
-            <strong>Email:</strong>
-            <a
-              href="mailto:info@example.com"
-              class="text-blue-400 hover:underline"
-              >info@example.com</a
-            >
+            <strong>Hotline: </strong>
+            <a href="tel:0981063636">0981 06 36 36</a>
           </p>
         </div>
-        <div class="mt-4">
-          <p>© 2025 Y&M. All rights reserved.</p>
-        </div>
+      </div>
+      <div class="mt-4">
+        <p>© 2025 Y&M. All rights reserved.</p>
       </div>
     </footer>
 
@@ -335,6 +335,20 @@
       const mobileMenu = document.getElementById("mobile-menu");
       menuBtn.addEventListener("click", () => {
         mobileMenu.classList.toggle("hidden");
+      });
+
+      //Toggle Hotline
+      function toggleHotlinePopup() {
+        const popup = document.getElementById("hotlinePopup");
+        popup.classList.toggle("show");
+      }
+
+      document.addEventListener("click", function (e) {
+        const popup = document.getElementById("hotlinePopup");
+        const button = document.querySelector(".hotline-btn");
+        if (!popup.contains(e.target) && !button.contains(e.target)) {
+          popup.classList.remove("show");
+        }
       });
     </script>
   </body>
