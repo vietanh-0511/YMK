@@ -31,45 +31,16 @@
   object-fit: cover;
   z-index: -1;
 }
-.hotline-btn {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  z-index: 20;
-  color: #111111;
-  padding: 12px 12px;
-  border-radius: 50px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-weight: bold;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  transition: background-color 0.3s, transform 0.2s;
-}
-.hotline-btn svg {
-  width: 24px;
-  height: 24px;
-}
-.hotline-popup {
-  display: none;
-  position: fixed;
-  bottom: 80px;
-  left: 20px;
-  z-index: 20;
-  background-color: rgba(0, 0, 0, 0);
-  color: #111111;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  opacity: 0;
-  transform: scale(0.8) translateY(20px);
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-.hotline-popup.show {
+
+.hotline-area {
   display: flex;
   flex-direction: column;
   gap: 10px;
   opacity: 1;
-  transform: scale(1) translateY(0);
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 20;
 }
 .hotline-number {
   color: #111111;
@@ -80,17 +51,10 @@
   gap: 8px;
   font-weight: bold;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  transition: background-color 0.3s, transform 0.2s;
 }
-.custom-booking-btn {
-  background: linear-gradient(
-    270deg,
-    #c39835 0%,
-    #fbf3a6 23.9%,
-    #c39835 50.4%,
-    #fbf3a6 79.4%,
-    #bf922d 100%
-  );
+.hotline-number svg {
+  width: 24px;
+  height: 24px;
 }
 
 .gradient-button {

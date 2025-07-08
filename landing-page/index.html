@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Y&M Karaoke - Nơi cảm xúc thăng hoa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../assets/css/landing-page.css" />
+    <link rel="stylesheet" href="../assets/css/output.css" />
+  </head>
+  <body class="bg-gray-900 text-white font-sans">
+    <!-- Header with Logo and Navbar -->
+    <header class="fixed top-0 left-0 w-full bg-black bg-opacity-70 z-10">
+      <div
+        class="mx-auto lg:px-[70px] px-4 py-4 flex items-center justify-between"
+      >
+        <!-- Logo -->
+        <div class="flex items-center">
+          <img
+            src="../assets/images/logo_4x.png"
+            alt="Karaoke Lounge Logo"
+            class="h-20 max-sm:h-10"
+          />
+        </div>
+        <!-- Marquee -->
+        <div class="marquee mx-4 flex bg-transparent max-w-4xl">
+          <div class="marquee-content w-full dayland-text">
+            Nơi Cảm Xúc Thăng Hoa
+          </div>
+        </div>
+        <!-- Navbar -->
+        <nav class="flex gap-4 max-sm:hidden">
+          <a href="#home" class="navigater-link transition duration-300"
+            >Trang Chủ</a
+          >
+          <a href="#features" class="navigater-link transition duration-300"
+            >Giới Thiệu</a
+          >
+          <a href="#pricing" class="navigater-link transition duration-300"
+            >Khuyến Mãi</a
+          >
+          <a href="#location" class="navigater-link transition duration-300"
+            >Bản Đồ</a
+          >
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+          <button id="menu-btn" class="text-white focus:outline-none">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="md:hidden hidden bg-black bg-opacity-90 p-4">
+        <a href="#home" class="block py-2 navigater-link">Home</a>
+        <a href="#features" class="block py-2 navigater-link">Giới Thiệu</a>
+        <a href="#pricing" class="block py-2 navigater-link">Khuyến Mãi</a>
+        <a href="#location" class="block py-2 navigater-link">Bản Đồ</a>
+      </div>
+    </header>
+
+    <!-- Hotline Buttons -->
+    <div class="hotline-area" id="hotlinePopup">
+      <a href="tel:0981063636" class="hotline-number gradient-button">
+        <svg fill="currentColor" viewBox="0 0 24 24">
+          <path
+            d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.24 1.02l-2.2 2.2z"
+          />
+        </svg>
+        <span>0981 06 36 36</span>
+      </a>
+      <a href="tel:0987631212" class="hotline-number gradient-button">
+        <svg fill="currentColor" viewBox="0 0 24 24">
+          <path
+            d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.24 1.02l-2.2 2.2z"
+          />
+        </svg>
+        <span>0987 63 12 12</span>
+      </a>
+    </div>
+
+    <!-- Hero Section with Background Video -->
+    <section
+      id="home"
+      class="relative h-screen overflow-hidden max-sm:min-h-[700px]"
+    >
+      <img class="video-bg lg:hidden" src="../assets/images/NKO_1020.jpg" />
+      <img class="video-bg max-lg:hidden" src="../assets/images/NKO_1095.jpg" />
+      <div
+        class="bg-black bg-opacity-70 h-full flex flex-col justify-center items-center text-center px-4 relative z-0"
+      >
+        <!-- Zalo QR -->
+        <div
+          class="absolute h-[150px] max-sm:h-[100px] w-[150px] max-sm:w-[100px] top-[120px] right-[20px]"
+        >
+          <img src="../assets/images/zalo_qr.jpg" alt="Zalo" />
+        </div>
+
+        <div
+          class="relative w-[320px] h-[215px] rounded-lg overflow-hidden shadow-lg"
+        >
+          <!-- Background Image -->
+          <div
+            class="absolute inset-0 bg-cover bg-center"
+            style="background-image: url('../assets/images/black_bg_logo.png')"
+          ></div>
+          <!-- Overlay -->
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-end p-2"
+          >
+            <!-- Content -->
+            <a
+              href="tel:0981063636"
+              class="text-black font-semibold py-3 px-6 rounded-lg transition duration-300 py-2 px-6 my-2 gradient-button"
+              >Đặt Phòng Ngay</a
+            >
+          </div>
+        </div>
+
+        <!-- Info Box -->
+        <div class="info-box">
+          <div class="text-left">
+            <strong>Facebook:</strong>
+            <a href="https://www.facebook.com/KaraokeYaM">Karaoke Y&M</a>
+          </div>
+          <div class="text-left">
+            <strong>Youtube:</strong>
+            <a href="https://www.youtube.com/@karaokeym">Karaoke Y&M</a>
+          </div>
+          <div class="text-left">
+            <strong>Tiktok:</strong>
+            <a href="https://www.tiktok.com/@karaokey_m">Karaoke Y&M</a>
+          </div>
+          <div class="text-left flex flex-col">
+            <strong>Địa chỉ:</strong>
+            <a href="https://maps.app.goo.gl/vNTn6Kgvz5JUGXt36"
+              >- Mặt trước: 36A Nguyễn Hữu Thọ, Hoàng Mai Hà Nội</a
+            >
+            <a href="https://maps.app.goo.gl/Dki4E5amjAUqaJ8y6"
+              >- Mặt sau: 105 phố Đại Từ, Định Công, Hà Nội</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section with Background Image -->
+    <section
+      id="features"
+      class="bg-cover bg-center relative 2xl:aspect-[16/6] xl:aspect-[16/8] lg:aspect-[16/10]"
+      style="background-image: url('../assets/images/NKO_1004.jpg')"
+    >
+      <div class="bg-black bg-opacity-60 py-16 h-full">
+        <div class="max-w-6xl mx-auto bg-black bg-opacity-50 rounded-md p-7">
+          <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+            Y&M Karaoke
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="text-center">
+              <img
+                src="../assets/images/NKO_0960.jpg"
+                alt="Room 1"
+                class="mx-auto mb-4 rounded-lg"
+              />
+              <h3 class="text-xl font-semibold mb-2">
+                Không gian hiện đại – Phòng hát đa phong cách
+              </h3>
+              <p>
+                Y&M Karaoke sở hữu nhiều phòng hát với thiết kế đa dạng từ sang
+                trọng, lãng mạn đến năng động, phù hợp cho mọi nhu cầu từ hội
+                nhóm, gia đình đến tiệc sinh nhật.
+              </p>
+            </div>
+            <div class="text-center">
+              <img
+                src="../assets/images/NKO_1028.jpg"
+                alt="Room 2"
+                class="mx-auto mb-4 rounded-lg"
+              />
+              <h3 class="text-xl font-semibold mb-2">
+                Âm thanh – Ánh sáng đỉnh cao
+              </h3>
+              <p>
+                Trang bị hệ thống âm thanh chất lượng cao, ánh sáng LED điều
+                chỉnh theo nhạc, Y&M Karaoke mang đến trải nghiệm giải trí sống
+                động như sân khấu thực thụ.
+              </p>
+            </div>
+            <div class="text-center">
+              <img
+                src="../assets/images/NKO_0998.jpg"
+                alt="Room 3"
+                class="mx-auto mb-4 rounded-lg"
+              />
+              <h3 class="text-xl font-semibold mb-2">
+                Dịch vụ chuyên nghiệp – Giá cả hợp lý
+              </h3>
+              <p>
+                Đội ngũ nhân viên thân thiện, phục vụ nhanh chóng. Giá phòng và
+                combo đồ ăn, nước uống được thiết kế hợp lý – vừa túi tiền, lại
+                nhiều ưu đãi hấp dẫn.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section with Background Image -->
+    <section
+      id="pricing"
+      class="bg-cover bg-center relative 2xl:aspect-[16/6] xl:aspect-[16/8] lg:aspect-[16/10]"
+      style="background-image: url('../assets/images/NKO_0994.jpg')"
+    >
+      <div class="bg-black bg-opacity-60 py-16 px-5 h-full">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+            Chương trình khuyến mãi
+          </h2>
+          <div
+            class="grid grid-cols-1 md:grid-cols-3 gap-8 max-lg:gap-4 text-black"
+          >
+            <div class="p-6 rounded-lg text-center background-gradient">
+              <p class="text-2xl font-bold mb-4">Ưu đãi giờ vàng</p>
+              <p>
+                Từ 12h đến 18h mỗi ngày, khách hàng được
+                <b>giảm 50% giờ hát</b>.Ưu đãi áp dụng xuyên suốt các ngày trong
+                tuần
+              </p>
+            </div>
+            <div class="p-6 rounded-lg text-center background-gradient">
+              <p class="text-2xl font-bold mb-4">Giảm ngay 10% khi checkin</p>
+              <p>
+                Check-in tại quán, đánh giá 5 sao và để lại 5 bình luận trên
+                Google Maps để nhận <b>giảm 10% trên tổng bill</b>. Lan tỏa trải
+                nghiệm tuyệt vời cùng bạn bè và nhận quà liền tay!
+              </p>
+            </div>
+            <div class="p-6 rounded-lg text-center background-gradient">
+              <p class="text-2xl font-bold mb-4">Thẻ Siêu VIP</p>
+              <p>Miễn phí giờ hát từ 12h đến 24h mỗi ngày</p>
+              <p>Tặng bánh kem và trang trí phòng khi tổ chức sinh nhật</p>
+              <p>
+                Chiết khấu 10% tổng bill mỗi lần giới thiệu khách đến check-in
+                và đánh giá 5 sao
+              </p>
+              <p>Cấp mã số ưu tiên khi đặt phòng</p>
+              <p>Hiệu lực sử dụng: 3 tháng</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Google Maps Section -->
+    <section
+      id="location"
+      class="bg-cover bg-center"
+      style="background-image: url('../assets/images/NKO_1090.jpg')"
+    >
+      <div class="bg-black bg-opacity-60 py-16 px-5 h-full">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+            Bản đồ
+          </h2>
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.533727487748!2d105.8342992258402!3d20.971232039750895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ad4cecbd1cf5%3A0xb4cd4f095db3e314!2sKaraoke%20Y%26M%20(You%20and%20Me)!5e0!3m2!1svi!2s!4v1751825290910!5m2!1svi!2s"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="mystical-gradient text-white py-6 max-md:pb-[150px] flex flex-col items-center"
+    >
+      <div
+        class="container mx-auto px-4 text-center flex justify-between max-md:flex-col gap-4"
+      >
+        <div class="space-y-4">
+          <img
+            src="../assets/images/logo_4x.png"
+            alt="Logo"
+            class="mx-auto mt-2 w-24 h-auto"
+          />
+          <h3 class="dayland-text text-sm">Nơi Cảm Xúc Thăng Hoa</h3>
+        </div>
+        <div class="space-y-2 flex flex-col max-w-md text-left">
+          <p>
+            <strong>Facebook:</strong>
+            <a href="https://www.facebook.com/KaraokeYaM">Karaoke Y&M</a>
+          </p>
+          <p>
+            <strong>Youtube:</strong>
+            <a href="https://www.youtube.com/@karaokeym">Karaoke Y&M</a>
+          </p>
+          <p>
+            <strong>Tiktok:</strong>
+            <a href="https://www.tiktok.com/@karaokey_m">Karaoke Y&M</a>
+          </p>
+          <p>
+            <strong>Địa chỉ: </strong>36A Nguyễn Hữu Thọ, Thịnh Liệt, Hoàng Mai,
+            Hà Nội - Số 105, Đại Từ, Đại Kim, Hoàng Mai, Hà Nội
+          </p>
+          <p>
+            <strong>Hotline: </strong>
+            <a href="tel:0981063636">0981 06 36 36</a>
+          </p>
+        </div>
+      </div>
+      <div class="mt-4">
+        <p>© 2025 Y&M. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+
+      // Mobile Menu Toggle
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const navLink = document.querySelector(".navigater-link");
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+      document.addEventListener("click", function (e) {
+        if (!menuBtn.contains(e.target) && !navLink.contains(e.target)) {
+          mobileMenu.classList.add("hidden");
+        }
+      });
+    </script>
+  </body>
+</html>
