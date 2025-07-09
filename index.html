@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Y&M Karaoke - Nơi cảm xúc thăng hoa</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="assets/css/custom.css" />
+    <link rel="stylesheet" href="assets/css/landing-page.css" />
     <link rel="stylesheet" href="assets/css/output.css" />
-    <link rel="script" href="assets/js/custom.js" />
   </head>
   <body class="bg-gray-900 text-white font-sans">
     <!-- Header with Logo and Navbar -->
@@ -30,7 +29,7 @@
           </div>
         </div>
         <!-- Navbar -->
-        <nav class="flex space-x-4 md:space-x-8 max-sm:hidden">
+        <nav class="flex gap-4 max-sm:hidden">
           <a href="#home" class="navigater-link transition duration-300"
             >Trang Chủ</a
           >
@@ -73,37 +72,43 @@
       </div>
     </header>
 
-    <!-- Hotline Button -->
-    <button class="hotline-btn gradient-button" onclick="toggleHotlinePopup()">
-      <svg fill="currentColor" viewBox="0 0 24 24">
-        <path
-          d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.24 1.02l-2.2 2.2z"
-        />
-      </svg>
-    </button>
-    <!-- Hotline Popup -->
-    <div class="hotline-popup transition-discrete" id="hotlinePopup">
-      <div class="hotline-number gradient-button">
-        <strong>Lễ Tân:</strong>
-        <a href="tel:0981063636">0981 06 36 36</a>
-      </div>
-      <div class="hotline-number gradient-button">
-        <strong>Mr. Phong:</strong>
-        <a href="tel:0987631212">0987 63 12 12</a>
-      </div>
+    <!-- Hotline Buttons -->
+    <div class="hotline-area" id="hotlinePopup">
+      <a href="tel:0981063636" class="hotline-number gradient-button">
+        <svg fill="currentColor" viewBox="0 0 24 24">
+          <path
+            d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.24 1.02l-2.2 2.2z"
+          />
+        </svg>
+        <span>0981 06 36 36</span>
+      </a>
+      <a href="tel:0987631212" class="hotline-number gradient-button">
+        <svg fill="currentColor" viewBox="0 0 24 24">
+          <path
+            d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.24 1.02l-2.2 2.2z"
+          />
+        </svg>
+        <span>0987 63 12 12</span>
+      </a>
     </div>
 
     <!-- Hero Section with Background Video -->
-    <section id="home" class="relative h-screen overflow-hidden">
-      <!-- <video class="video-bg max-lg:hidden" autoplay muted loop playsinline>
-        <source src="assets/videos/background.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video> -->
+    <section
+      id="home"
+      class="relative h-screen overflow-hidden max-sm:min-h-[700px]"
+    >
       <img class="video-bg lg:hidden" src="assets/images/NKO_1020.jpg" />
       <img class="video-bg max-lg:hidden" src="assets/images/NKO_1095.jpg" />
       <div
         class="bg-black bg-opacity-70 h-full flex flex-col justify-center items-center text-center px-4 relative z-0"
       >
+        <!-- Zalo QR -->
+        <div
+          class="absolute h-[150px] max-sm:h-[100px] w-[150px] max-sm:w-[100px] top-[120px] right-[20px]"
+        >
+          <img src="assets/images/zalo_qr.jpg" alt="Zalo" />
+        </div>
+
         <div
           class="relative w-[320px] h-[215px] rounded-lg overflow-hidden shadow-lg"
         >
@@ -139,10 +144,13 @@
             <strong>Tiktok:</strong>
             <a href="https://www.tiktok.com/@karaokey_m">Karaoke Y&M</a>
           </div>
-          <div class="text-left">
+          <div class="text-left flex flex-col">
             <strong>Địa chỉ:</strong>
             <a href="https://maps.app.goo.gl/vNTn6Kgvz5JUGXt36"
-              >36A Nguyễn Hữu Thọ, Hoàng Mai Hà Nội</a
+              >- Mặt trước: 36A Nguyễn Hữu Thọ, Hoàng Mai Hà Nội</a
+            >
+            <a href="https://maps.app.goo.gl/Dki4E5amjAUqaJ8y6"
+              >- Mặt sau: 105 phố Đại Từ, Định Công, Hà Nội</a
             >
           </div>
         </div>
@@ -281,9 +289,11 @@
 
     <!-- Footer -->
     <footer
-      class="mystical-gradient text-white py-6 max-lg:pb-[80px] flex flex-col items-center"
+      class="mystical-gradient text-white py-6 max-md:pb-[150px] flex flex-col items-center"
     >
-      <div class="container mx-auto px-4 text-center flex justify-between max-md:flex-col gap-4">
+      <div
+        class="container mx-auto px-4 text-center flex justify-between max-md:flex-col gap-4"
+      >
         <div class="space-y-4">
           <img
             src="assets/images/logo_4x.png"
@@ -333,21 +343,13 @@
       // Mobile Menu Toggle
       const menuBtn = document.getElementById("menu-btn");
       const mobileMenu = document.getElementById("mobile-menu");
+      const navLink = document.querySelector(".navigater-link");
       menuBtn.addEventListener("click", () => {
         mobileMenu.classList.toggle("hidden");
       });
-
-      //Toggle Hotline
-      function toggleHotlinePopup() {
-        const popup = document.getElementById("hotlinePopup");
-        popup.classList.toggle("show");
-      }
-
       document.addEventListener("click", function (e) {
-        const popup = document.getElementById("hotlinePopup");
-        const button = document.querySelector(".hotline-btn");
-        if (!popup.contains(e.target) && !button.contains(e.target)) {
-          popup.classList.remove("show");
+        if (!menuBtn.contains(e.target) && !navLink.contains(e.target)) {
+          mobileMenu.classList.add("hidden");
         }
       });
     </script>
