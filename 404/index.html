@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <link rel="stylesheet" href="assets/css/404.css">
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="glow">404</h1>
+        <p>Lạc lối trong bóng tối?</p>
+        <p>Trang bạn tìm kiếm không tồn tại.</p>
+        <p>Bạn sẽ được chuyển hướng đến <a href="/landing-page">Landing Page</a> trong <span id="countdown">5</span> giây.</p>
+    </div>
+    <script>
+        // Countdown and redirect
+        let seconds = 5;
+        const countdownElement = document.getElementById('countdown');
+        const redirectUrl = '/landing-page'; // Redirect to landing page
+
+        const countdown = setInterval(() => {
+            seconds--;
+            countdownElement.textContent = seconds;
+            if (seconds <= 0) {
+                clearInterval(countdown);
+                window.location.href = redirectUrl;
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
