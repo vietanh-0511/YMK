@@ -110,7 +110,6 @@
 }
 .info-box a {
   color: var(--bronze-gold);
-  text-decoration: underline;
 }
 .info-box a:hover {
   text-shadow: 0 0 2px #cabb58, 0 0 4px #e3d37a;
